@@ -1,14 +1,16 @@
 <template>
   <div class="hello">
-    <button @click="reset" v-if="!atTheTop">To the top</button>
+    <div>
 
-    <h1 v-if="element.childHeader">{{element.childHeader}}</h1>
-    <h2 v-if="element.hint">{{element.hint}}</h2>
+      <h1 v-if="element.childHeader">{{element.childHeader}}</h1>
+      <h2 v-if="element.hint">{{element.hint}}</h2>
 
-    <h1 v-if="element.result">{{element.result}}</h1>
+      <h1 v-if="element.result">{{element.result}}</h1>
 
-    <button v-for="b in element.children" :key="b.text" @click="navigate(b)" >{{b.text}}</button>
+      <button class="alternative" v-for="b in element.children" :key="b.text" @click="navigate(b)" >{{b.text}}</button>
+    </div>
 
+    <button class="back" @click="reset" v-if="!atTheTop">To the top</button>
   </div>
 </template>
 
@@ -274,9 +276,28 @@ a {
   color: #42b983;
 }
 
-button {
-  padding: 0.3em;
-  margin: 0.3em;
+.hello {
+  max-width: 1200px;
+  margin: auto auto;
+}
+
+button.alternative {
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 1.2em;
   cursor: pointer;
+  background-color: whitesmoke;
+  border-radius: 1em;
+}
+
+
+button.back {
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border-radius: 1em;
+  float: right;
 }
 </style>
