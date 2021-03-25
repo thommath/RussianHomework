@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <button @click="reset">To the top</button>
+    <button @click="reset" v-if="!atTheTop">To the top</button>
 
     <h1 v-if="element.childHeader">{{element.childHeader}}</h1>
     <h2 v-if="element.hint">{{element.hint}}</h2>
@@ -239,6 +239,10 @@ const root: Alternative = {
 export default class HelloWorld extends Vue {
 
   curElem: Alternative = root;
+
+  get atTheTop(){
+    return this.element.text == root.text;
+  }
 
   get element() {
     return this.curElem;
