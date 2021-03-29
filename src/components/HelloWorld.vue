@@ -26,11 +26,11 @@ type Alternative = {
 }
 
 const root: Alternative = {
-    text: "Root",
+    text: "Noun",
     childHeader: "What do you want to conjugate?",
     children: [
     {
-      text: "Noun",
+      text: "Find gender",
       childHeader: "What is the ending?",
       children: [
         {
@@ -128,10 +128,6 @@ const root: Alternative = {
               text: "e",
               result: "Remove e, add я",
             },
-            {
-              text: "иe",
-              result: "It's already perfect",
-            },
           ]
         },
       ],
@@ -215,6 +211,7 @@ const root: Alternative = {
           children: [
             {
               text: "a",
+              hint: "If left with a cluster of three consonants you usually need to insert the vowel o, e or ё",
               result: "Remove a",
             },
             {
