@@ -21,8 +21,16 @@
 import { Alternative } from "@/assets/Alternative";
 import { Options, Vue } from "vue-class-component";
 import { Noun } from "../assets/Nouns";
+import { Adjective } from "../assets/Adjectives";
 
-const root: Alternative = Noun;
+const root: Alternative = {
+  text: "Root",
+  childHeader: "What type of word is it?",
+  children: [
+    Noun,
+    Adjective,
+  ]
+};
 
 @Options({
 })

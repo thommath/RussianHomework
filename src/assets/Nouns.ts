@@ -51,7 +51,7 @@ export const Noun: Alternative = {
       ],
     },
     {
-      text: "Novinative",
+      text: "Nominative",
       childHeader: "What form?",
       children: [
         {
