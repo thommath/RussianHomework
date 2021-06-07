@@ -21,7 +21,8 @@ export const Adjective: Alternative = {
                 children: [
                   {
                     text: "Unstressed",
-                    result: "Ends in ий",
+                    hint: "If the stem ends in г, к, х, ж, ч, ш or щ the ending must be ий",
+                    result: "Ends in ый",
                   },
                   {
                     text: "Stressed",
